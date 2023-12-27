@@ -13,12 +13,22 @@ export class TasksService {
     });
   }
 
-  findAll() {
-    return this.prisma.task.findMany({
+  async findAll() {
+    const tasksList = await this.prisma.task.findMany({
       orderBy: {
         created_at: 'desc',
       },
     });
+
+    const taskListToReturn = tasksList.map((task) => {
+      return {
+        id: task.id,
+        title: task.title,
+        isDone: task.isDone,
+      };
+    });
+
+    return taskListToReturn;
   }
 
   findOne(id: string) {
