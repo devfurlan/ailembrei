@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:3000
+# @authToken = {{authenticate.response.body.access_token}}
+
+###
+
+# @name tasks
+GET {{baseUrl}}/tasks
+
+###
+GET {{baseUrl}}/tasks/c4e6b5c7-a7a1-4aae-a68asddfe7fa647c
+
+###
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 323"
+}
+
+###
+PATCH {{baseUrl}}/tasks/6169c139-3801-4258-b467-4143b4c668bb
+Content-Type: application/json
+
+{
+  "title": "Comprar banana"
+}
+
+###
+DELETE {{baseUrl}}/tasks/85581297-ca1b-46bc-b07c-103291411805
