@@ -6,7 +6,9 @@ import { PrismaNotFoundExceptionFilter } from './exception-filters/prisma-not-fo
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.enableCors();
+  app.enableCors({
+    origin: ['https://todo.devfurlan.com/'],
+  });
 
   app.useGlobalPipes(
     new ValidationPipe({
