@@ -3,7 +3,6 @@
     "ms-vscode-remote.remote-containers",
     "prisma.prisma",
     "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "humao.rest-client"
+    "dbaeumer.vscode-eslint"
   ]
 }
