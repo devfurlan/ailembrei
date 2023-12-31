@@ -26,14 +26,14 @@ export class TasksController {
     return this.tasksService.findAll();
   }
 
-  @Patch(':id')
   @HttpCode(204)
+  @Patch(':id')
   update(@Param('id') id: string, @Body() updateTaskDto: UpdateTaskDto) {
     return this.tasksService.update(id, updateTaskDto);
   }
 
-  @Delete(':id')
   @HttpCode(204)
+  @Delete(':id')
   remove(@Param('id') id: string) {
     return this.tasksService.remove(id);
   }
