@@ -27,12 +27,13 @@ export class TasksController {
   }
 
   @Patch(':id')
+  @HttpCode(204)
   update(@Param('id') id: string, @Body() updateTaskDto: UpdateTaskDto) {
     return this.tasksService.update(id, updateTaskDto);
   }
 
-  @HttpCode(204)
   @Delete(':id')
+  @HttpCode(204)
   remove(@Param('id') id: string) {
     return this.tasksService.remove(id);
   }

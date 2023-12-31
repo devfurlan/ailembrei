@@ -7,7 +7,7 @@ export default defineConfig({
     include: ['**/*.e2e-spec.ts'],
     globals: true,
     root: './',
-    exclude: [...configDefaults.exclude, '**/data/pg/**'],
+    exclude: [...configDefaults.exclude, '**/.docker/dbdata/**'],
     setupFiles: ['./test/setup-e2e.ts'],
   },
   plugins: [

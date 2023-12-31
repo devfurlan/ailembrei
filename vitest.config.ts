@@ -6,7 +6,7 @@ export default defineConfig({
   test: {
     globals: true,
     root: './',
-    exclude: [...configDefaults.exclude, '**/data/pg/**'],
+    exclude: [...configDefaults.exclude, '**/.docker/dbdata/**'],
   },
   plugins: [
     tsConfigPaths(),
