@@ -19,7 +19,7 @@ model User {
 
 model Task {
   id         String   @id @default(cuid())
-  title      String   @unique
+  title      String
   isDone     Boolean  @default(false) @map("is_done")
   author     User?    @relation(fields: [authorId], references: [id])
   authorId   String?  @map("author_id")
