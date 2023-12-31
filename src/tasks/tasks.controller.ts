@@ -26,7 +26,6 @@ export class TasksController {
     return this.tasksService.findAll();
   }
 
-  @HttpCode(204)
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateTaskDto: UpdateTaskDto) {
     return this.tasksService.update(id, updateTaskDto);
