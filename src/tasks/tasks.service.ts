@@ -31,14 +31,6 @@ export class TasksService {
     return taskListToReturn;
   }
 
-  findOne(id: string) {
-    return this.prisma.task.findUniqueOrThrow({
-      where: {
-        id,
-      },
-    });
-  }
-
   update(id: string, updateTaskDto: UpdateTaskDto) {
     return this.prisma.task.update({
       where: {
